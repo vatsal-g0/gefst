@@ -4,7 +4,7 @@
 
 ---
 
-## 🚀 Features
+## Features
 
 - Create nested folders and files
 - Write file contents directly from config
@@ -15,7 +15,7 @@
 
 ---
 
-## 📦 Installation
+## Installation
 
 ### Using Go
 
@@ -23,3 +23,57 @@
 go install github.com/vatsal-g0/gefst@latest
 ```
 Make sure your `$GOPATH/bin` is in your PATH.
+
+## Usage
+```
+gefst [options] <config.json>
+```
+
+## Example Config
+```
+{
+  "type": "folder",
+  "name": "project",
+  "children": [
+    {
+      "type": "file",
+      "name": "main.go",
+      "content": "package main\n\nfunc main() {}"
+    },
+    {
+      "type": "folder",
+      "name": "data",
+      "children": []
+    }
+  ]
+}
+```
+
+## Example
+```
+gefst --root ./output example/basic.json
+```
+
+### Output
+```
+output/
+└── project/
+    ├── main.go
+    └── data/
+```
+
+## Options
+- `--root <dir>` → output directory (default: .)
+- `--dry-run` → preview only
+- `--overwrite` → overwrite existing files
+- `--verbose` → detailed logs
+- `--validate` → validate config only
+- `--quiet` → no output
+- `--no-color` → disable colors
+
+## Notes
+- Errors are intentionally minimal.
+- Input is expected to be valid.
+
+## License
+MIT License
