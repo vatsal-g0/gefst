@@ -63,13 +63,12 @@ func parseFlags() Config {
 
 	flag.Parse()
 
-	args := flag.Args()
-
 	if *version {
 		fmt.Println("gefst", VERSION)
 		os.Exit(0)
 	}
-
+	
+	args := flag.Args()
 	if len(args) != 1 {
 		fmt.Println("usage: gefst [options] <config.json>")
 		fmt.Println("options:")
