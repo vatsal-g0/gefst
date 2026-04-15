@@ -1,0 +1,22 @@
+{
+    "type": "",
+    "nameasdasd": "project",
+    "children": [
+        {
+            "type": "file",
+            "name": "main.go",
+            "content": "package main\n"
+        },
+        {
+            "type": "folder",
+            "name": "data",
+            "children": [
+                {
+                    "type": "file",
+                    "name": "info.txt",
+                    "content": "sample data"
+                }
+            ]
+        }
+    ]
+}
