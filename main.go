@@ -8,6 +8,8 @@ import (
 	"path/filepath"
 )
 
+const VERSION = "v0.1.0"
+
 // colors
 const (
 	colorReset = "\033[0m"
@@ -62,6 +64,12 @@ func parseFlags() Config {
 	flag.Parse()
 
 	args := flag.Args()
+
+	if *version {
+		fmt.Println("gefst", VERSION)
+		os.Exit(0)
+	}
+
 	if len(args) != 1 {
 		fmt.Println("usage: gefst [options] <config.json>")
 		fmt.Println("options:")
@@ -243,11 +251,6 @@ func main() {
 	var root Node
 	if err := json.Unmarshal(data, &root); err != nil {
 		fail(cfg)
-	}
-
-	if cfg.Version {
-		fmt.Println(colorBold + "gefst v1.0.0" + colorReset)
-		return
 	}
 
 	if cfg.Validate {
