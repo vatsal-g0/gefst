@@ -76,5 +76,7 @@ output/
 - Errors are intentionally minimal.
 - Input is expected to be valid.
 
+- Please give your feedback, I would really appreciate it.
+
 ## License
 MIT License
