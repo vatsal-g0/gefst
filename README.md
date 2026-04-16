@@ -1,6 +1,6 @@
 # GEFST
 
-**GEFST (Generate File STructure)** is a CLI tool that generates file and folder structures from a JSON configuration.
+**GEFST (GEnerate File STructure)** is a CLI tool that generates file and folder structures from a JSON configuration.
 
 ---
 
