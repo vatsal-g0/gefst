@@ -29,7 +29,7 @@ Make sure your `$GOPATH/bin` is in your PATH.
 gefst [options] <config.json>
 ```
 
-## Example Config
+### Example Config
 ```
 {
   "type": "folder",
@@ -49,12 +49,13 @@ gefst [options] <config.json>
 }
 ```
 
-## Example
+### Example
 ```
 gefst --root ./output example/basic.json
 ```
 
-### Output
+**Output:**
+
 ```
 output/
 └── project/
