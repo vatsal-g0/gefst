@@ -1,6 +1,6 @@
 {
     "type": "",
-    "nameasdasd": "project",
+    "name": "project",
     "children": [
         {
             "type": "file",
